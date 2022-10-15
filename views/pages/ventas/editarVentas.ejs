@@ -1,0 +1,43 @@
+<%- include('../partials/header') %>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+
+<div class="container">
+  <form action="/action_page.php">
+    
+    <div class="form-group">
+      <label for="txt">Nombre Producto vendido</label>
+    <input type="text" class="form-control" name="ProductoVendido" placeholder="Nombre del producto vendido" id="Nombre">
+    </div>
+    
+    <div class="form-group">
+      <label for="txt">Fecha Venta</label>
+      <input type="date" class="form-control" name="FechaVenta" placeholder="fechaVenta" id="fechaVenta">
+    </div>
+
+    <div class="form-group">
+        <label for="txt">Subtotal Venta</label>
+        <input type="text" class="form-control"  name="SubtotalVenta" placeholder="subtotal de la Venta" id="subtotalVenta">
+    </div>
+   <!---- <div class="form-group">
+        <label for="txt">Impuesto Venta</label>
+        <input type="text" class="form-control"  name="ImpuestoVenta" placeholder="impuesto de la Venta" id="impuestoVenta">
+    </div>-->
+    <div class="form-group">
+        <label for="txt">Cliente </label>
+        <input type="text" class="form-control"  name="Cliente" placeholder="Cliente" id="clienteCompra">
+    </div>
+    <div class="form-group">
+        <label for="txt">Vendedor </label>
+        <input type="text" class="form-control"  name="vendedorVende" placeholder="vendedor " id="vendedorVende">
+    </div>
+    <div class="form-group">
+        <label for="txt">Total Venta</label>
+        <input type="text" class="form-control"  name="TotalVenta" placeholder="Total de la Venta" id="totalVenta">
+    </div>
+
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>

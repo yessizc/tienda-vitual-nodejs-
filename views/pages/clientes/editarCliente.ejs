@@ -1,0 +1,35 @@
+<%- include('../partials/header') %>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+
+<div class="container">
+  <form action="/action_page.php">
+    
+    <div class="form-group">
+      <label for="txt">Nombre Cliente/label>
+      <input type="text" class="form-control" name="Nombre" placeholder="Nombre" id="Nombre">
+    </div>
+    
+    <div class="form-group">
+      <label for="txt">Telefono</label>
+      <input type="Number" class="form-control" name="Telefono" placeholder="Telefono" id="Telefono">
+    </div>
+
+    <div class="form-group">
+        <label for="txt">Ubicacion</label>
+        <input type="text" class="form-control"  name="Ubicacion" placeholder="Ubicacion" id="Ubicacion">
+      </div>
+      <div class="form-group">
+        <label for="txt">Total Comprado</label>
+        <input type="text" class="form-control"  name="Total" placeholder="Total" id="Total">
+      </div>
+      <div class="form-group">
+        <label for="txt">Historico Compras</label>
+        <input type="text" class="form-control"  name="Historico" placeholder="Historico" id="Historico">
+      </div>
+
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>

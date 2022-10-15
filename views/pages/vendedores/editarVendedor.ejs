@@ -1,0 +1,27 @@
+<%- include('../partials/header') %>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+
+<div class="container">
+  <form action="/action_page.php">
+    
+    <div class="form-group">
+      <label for="txt">Nombre vendedor/label>
+      <input type="text" class="form-control" name="Nombre" placeholder="Nombre del vendedor" id="Nombre">
+    </div>
+    
+    <div class="form-group">
+      <label for="txt">Cedula</label>
+      <input type="Number" class="form-control" name="Cedula" placeholder="Cedula" id="Cedula">
+    </div>
+
+    <div class="form-group">
+        <label for="txt">pedidos Despachados</label>
+        <input type="text" class="form-control"  name="VentasDespachadas" placeholder="pedidos Despachados" id="pedidos Despachados">
+      </div>
+
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
