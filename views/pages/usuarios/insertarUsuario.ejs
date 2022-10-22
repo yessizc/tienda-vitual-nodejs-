@@ -1,0 +1,26 @@
+<%- include('../../partials/header') %>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+
+<div class="container" >
+  <form action="/registrarUsuario" method="post">
+    <div class="form-group" >
+      <label for="txt">Nombre</label>
+      <input type="text" name="Nombre" class="form-control" placeholder="nombre y apellido" id="Nombre">
+    </div>
+    <div class="form-group">
+      <label for="txt">Correo</label>
+      <input type="email" name="Correo" class="form-control" placeholder="registre su correo" id="Correo">
+    </div>
+    
+    <div class="form-group">
+      <label for="txt">Clave</label>
+      <input type="password" name="Clave" class="form-control" placeholder="ingrese su contraseña" id="Clave">
+    </div>
+
+
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>

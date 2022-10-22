@@ -4,6 +4,9 @@
 const express = require('express');
 const modeloproducto = require('../modelos/productos');
 const modelosusuarios= require('../modelos/usuarios');
+const modelocliente= require('../modelos/cliente');
+const modelovendedores= require('../modelos/vendedores');
+const modelosventas= require('../modelos/ventas');
 const  conexion= require('../config/connectionMongoose')
 const router = express.Router();
 
@@ -25,10 +28,10 @@ router.get('/conectar', (req,res)=>{
 });
 
 
-router.get('/inicio', async (req, res) => {
+/*router.get('/inicio', async (req, res) => {
    console.log(await dbc.findOne( ))
    res.render('pages/index');
-  });
+  });*/
 
 
 router.get('/formulario',  (req, res) => {
@@ -37,7 +40,7 @@ router.get('/formulario',  (req, res) => {
    })
 
 
-router.post('/registrar',async(req,res,next)=>{
+router.post('/registrar',(req,res)=>{
     
   
     const productodb= new modeloproducto({
@@ -49,32 +52,38 @@ router.post('/registrar',async(req,res,next)=>{
        habilitado: true
 
     })
-    await productodb.save()
+     productodb.save()
     console.log(req.body.Referencia)
-  res.render('pages/index')
+    res.render('pages/index')
 });
 
-router.post('/registrarUsuario',async(req,res,next)=>{
+router.get('/registarUser',(req, res) => {
+   
+    res.render('pages/usuarios/insertarUsuario');
+   })
+
+router.post('/registrarUsuario',(req,res)=>{
     
-  
+    console.log(req.body.rol);
     const usuariosdb= new modelosusuarios({
-        idusuario : req.body. idusuario,
-        correo: req.body.correo,
-        contraseña: req.body.contraseña,
+        idusuario : req.body.idusuario,
+        nombre:req.body.Nombre,
+        correo: req.body.Correo,
+        clave: req.body.Clave,
         rol: req.body.rol,
         habilitado: true
 
     })
-    await usuariosdb.save()
-    console.log(req.body.rol)
-  res.render('pages/index')
+    usuariosdb.save()
+   
+  res.render('../views/pages/usuarios/loginprueba.ejs')
 });
 
 
-router.get('/loginprueba',  (req, res) => {
+/*router.get('/loginprueba',  (req, res) => {
    
     res.render('pages/index');
-   })
+   })*/
 
 
 
